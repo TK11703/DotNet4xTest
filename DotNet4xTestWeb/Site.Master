@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="DotNet4xTestWeb.Site" %>
+
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>
+        <asp:ContentPlaceHolder ID="PageTitleContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="sticky-footer_files/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        .container {
+            width: auto;
+            max-width: 800px;
+            padding: 0 15px;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="arrow-left-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+        </symbol>
+        <symbol id="chevron-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+        </symbol>
+
+    </svg>
+    <main class="flex-shrink-0">
+        <div class="container">
+            <h1 class="mt-5 pb-3 border-bottom border-secondary">
+                <img src="dotnet.png" width="50" height="50" />
+                <asp:ContentPlaceHolder ID="SiteTitleContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </h1>
+            <form id="form1" runat="server">
+                <div>
+                    <asp:ContentPlaceHolder ID="PageBodyContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-body-tertiary">
+        <div class="container">
+            <span class="text-body-secondary">The site is offered as a courtesy and no support can and will be provided outside of the GitHub repository.</span>
+        </div>
+    </footer>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="sticky-footer_files/bootstrap.js"></script>
+    <script src="sticky-footer_files/jquery.js"></script>
+    <asp:ContentPlaceHolder ID="ScriptPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+
+</html>
