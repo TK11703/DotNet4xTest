@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="sticky-footer_files/bootstrap.css" rel="stylesheet">
+    <link href="sticky-footer/bootstrap.css" rel="stylesheet">
     <style type="text/css">
         .container {
             width: auto;
@@ -54,8 +54,8 @@
         </div>
     </footer>
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="sticky-footer_files/bootstrap.js"></script>
-    <script src="sticky-footer_files/jquery.js"></script>
+    <script src="sticky-footer/bootstrap.js"></script>
+    <script src="sticky-footer/jquery.js"></script>
     <asp:ContentPlaceHolder ID="ScriptPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
 </body>

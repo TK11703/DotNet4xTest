@@ -34,8 +34,29 @@
     </div>
     <br />
     <br />
+    <div class="row mb-4">
+        <div class="col">
+            <p class="lead">Authentication Results</p>
+            <ul class="list-group list-group-horizontal mb-1">
+                <li class="list-group-item col-4">Is Authenticated</li>
+                <li class="list-group-item col-8"><%= HttpContext.Current.User.Identity.IsAuthenticated %></li>
+            </ul>
+            <ul class="list-group list-group-horizontal mb-1">
+                <li class="list-group-item col-4">Authentication Type</li>
+                <li class="list-group-item col-8"><%= HttpContext.Current.User.Identity.AuthenticationType %></li>
+            </ul>
+            <ul class="list-group list-group-horizontal mb-1">
+                <li class="list-group-item col-4">Name</li>
+                <li class="list-group-item col-8"><%= HttpContext.Current.User.Identity.Name %></li>
+            </ul>
+            <ul class="list-group list-group-horizontal mb-1">
+                <li class="list-group-item col-4">Is in '<%=this.userRoleToCheck %>'</li>
+                <li class="list-group-item col-8"><%= HttpContext.Current.User.IsInRole(this.userRoleToCheck) %></li>
+            </ul>
+        </div>
+    </div>
     <div class="row">
-        <div class="span12">
+        <div class="col">
             <p class="lead">Would you like to view the server variables?</p>
             <p>Select the following link to view the server variables associated with the requests to the web server.</p>
             <p><a href="ServerVariables.aspx" title="Click to view the server variables.">View all server variables...</a></p>
