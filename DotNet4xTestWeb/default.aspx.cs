@@ -6,10 +6,12 @@ namespace DotNet4xTestWeb
     public partial class _default : System.Web.UI.Page
     {
         public string siteTitle = string.Empty;
+        public string userRoleToCheck = string.Empty;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             siteTitle = ConfigurationManager.AppSettings["SiteTitle"];
-        }
+			userRoleToCheck = ConfigurationManager.AppSettings["UserRoleToCheck"];
+		}
     }
 }
