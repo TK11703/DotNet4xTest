@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DotNet4xTestWeb.Helpers;
+using System;
 
 namespace DotNet4xTestWeb
 {
@@ -12,7 +13,7 @@ namespace DotNet4xTestWeb
 
         protected void Session_Start(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

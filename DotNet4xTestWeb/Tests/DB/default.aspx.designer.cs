@@ -7,20 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DotNet4xTestWeb
+namespace DotNet4xTestWeb.Tests.DB
 {
 
 
 	public partial class _default
 	{
-
-		/// <summary>
-		/// authenticationDisplay control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::DotNet4xTestWeb.authenticationDisplay authenticationDisplay;
 	}
 }

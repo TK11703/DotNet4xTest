@@ -6,7 +6,7 @@ namespace DotNet4xTestWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Nothing displayed or performed here.
         }
 	}
 }

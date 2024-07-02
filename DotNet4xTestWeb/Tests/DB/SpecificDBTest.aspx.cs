@@ -6,16 +6,16 @@ using System.Data.SqlClient;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
 
-namespace DotNet4xTestWeb
+namespace DotNet4xTestWeb.Tests.DB
 {
     public partial class SpecificDBTest : System.Web.UI.Page
     {
-        public string siteTitle = string.Empty;
+		public string SiteTitle { get; set; } = string.Empty;
 		private string connectionString = string.Empty;
 
 		protected void Page_Load(object sender, EventArgs e)
         {
-            siteTitle = ConfigurationManager.AppSettings["SiteTitle"];
+            SiteTitle = ConfigurationManager.AppSettings["SiteTitle"];
 			connectionString = ConfigurationManager.ConnectionStrings["SQLConnection_Specific"].ConnectionString;
 			GatherServerInformation();
         }
@@ -245,8 +245,10 @@ namespace DotNet4xTestWeb
 						this.executedAs.Text = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 						using (SqlConnection conn = new SqlConnection(connectionString))
 						{
-							SqlCommand cmd = new SqlCommand("spCustomer_GetAll", conn);
-							cmd.CommandType = System.Data.CommandType.StoredProcedure;
+							SqlCommand cmd = new SqlCommand("spCustomer_GetAll", conn)
+							{
+								CommandType = System.Data.CommandType.StoredProcedure
+							};
 							if (conn.State != System.Data.ConnectionState.Open)
 							{
 								conn.Open();
@@ -289,8 +291,10 @@ namespace DotNet4xTestWeb
 					this.executedAs.Text = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 					using (SqlConnection conn = new SqlConnection(connectionString))
 					{
-						SqlCommand cmd = new SqlCommand("spCustomer_GetAll", conn);
-						cmd.CommandType = System.Data.CommandType.StoredProcedure;
+						SqlCommand cmd = new SqlCommand("spCustomer_GetAll", conn)
+						{
+							CommandType = System.Data.CommandType.StoredProcedure
+						};
 						if (conn.State != System.Data.ConnectionState.Open)
 						{
 							conn.Open();
