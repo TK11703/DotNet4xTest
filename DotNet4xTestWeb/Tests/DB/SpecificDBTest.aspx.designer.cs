@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DotNet4xTestWeb
+namespace DotNet4xTestWeb.Tests.DB
 {
 
 

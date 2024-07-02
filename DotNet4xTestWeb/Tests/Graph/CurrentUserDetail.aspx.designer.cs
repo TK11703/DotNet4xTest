@@ -7,12 +7,30 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DotNet4xTestWeb
+namespace DotNet4xTestWeb.Tests.Graph
 {
 
 
-	public partial class _default
+	public partial class CurrentUserDetail
 	{
+
+		/// <summary>
+		/// serverVariableResultsLabel control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label serverVariableResultsLabel;
+
+		/// <summary>
+		/// serverVariableResults control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Literal serverVariableResults;
 
 		/// <summary>
 		/// authenticationDisplay control.

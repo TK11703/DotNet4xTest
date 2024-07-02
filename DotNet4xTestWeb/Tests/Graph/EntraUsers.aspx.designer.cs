@@ -7,65 +7,47 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DotNet4xTestWeb
+namespace DotNet4xTestWeb.Tests.Graph
 {
 
 
-	public partial class Site
+	public partial class EntraUsers
 	{
 
 		/// <summary>
-		/// PageTitleContent control.
+		/// userList control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.ContentPlaceHolder PageTitleContent;
+		protected global::System.Web.UI.WebControls.Repeater userList;
 
 		/// <summary>
-		/// SiteTitleContent control.
+		/// serverVariableResultsLabel control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.ContentPlaceHolder SiteTitleContent;
+		protected global::System.Web.UI.WebControls.Label serverVariableResultsLabel;
 
 		/// <summary>
-		/// BreadCrumbContent control.
+		/// serverVariableResults control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.ContentPlaceHolder BreadCrumbContent;
+		protected global::System.Web.UI.WebControls.Literal serverVariableResults;
 
 		/// <summary>
-		/// form1 control.
+		/// authenticationDisplay control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-		/// <summary>
-		/// PageBodyContent control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.ContentPlaceHolder PageBodyContent;
-
-		/// <summary>
-		/// ScriptPlaceHolder control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.ContentPlaceHolder ScriptPlaceHolder;
+		protected global::DotNet4xTestWeb.authenticationDisplay authenticationDisplay;
 	}
 }

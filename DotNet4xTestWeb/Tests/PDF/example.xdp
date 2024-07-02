@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V8.1" APIVersion="2.6.7185.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+	<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+		<xfa:data>
+			<ApplicantFullName>GOLDING, JOSE LUIS</ApplicantFullName>
+			<ApplicantBirthDate>05/27/2001</ApplicantBirthDate>
+			<ApplicantSSN>123450002</ApplicantSSN>
+			<ApplicantHomePhone></ApplicantHomePhone>
+			<CurrentResidenceAddressStreet>12342 Virginia Lane</CurrentResidenceAddressStreet>
+			<CurrentResidenceAddressZipCode>22407</CurrentResidenceAddressZipCode>
+			<CurrentResidenceAddressState>VA</CurrentResidenceAddressState>
+			<CurrentResidenceAddressCity>FREDERICKSBURG</CurrentResidenceAddressCity>
+			<ApplicantType>E</ApplicantType>
+		</xfa:data>
+	</xfa:datasets>
+	<pdf xmlns="http://ns.adobe.com/xdp/pdf/" href="http://localhost:64637/Tests/PDF/example.pdf">
+	</pdf>
+</xdp:xdp>

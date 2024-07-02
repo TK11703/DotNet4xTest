@@ -5,16 +5,16 @@ using System.Web.Hosting;
 using System.Data.SqlClient;
 using System.Web.UI.HtmlControls;
 
-namespace DotNet4xTestWeb
+namespace DotNet4xTestWeb.Tests.DB
 {
     public partial class MasterDBTest : System.Web.UI.Page
     {
-        public string siteTitle = string.Empty;
+		public string SiteTitle { get; set; } = string.Empty;
 		private string connectionString = string.Empty;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            siteTitle = ConfigurationManager.AppSettings["SiteTitle"];
+            SiteTitle = ConfigurationManager.AppSettings["SiteTitle"];
 			connectionString = ConfigurationManager.ConnectionStrings["SQLConnection_Master"].ConnectionString;
 			GatherServerInformation();
         }

@@ -1,42 +1,21 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SpecificDBTest.aspx.cs" Inherits="DotNet4xTestWeb.SpecificDBTest" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MasterDBTest.aspx.cs" Inherits="DotNet4xTestWeb.Tests.DB.MasterDBTest" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="PageTitleContent" runat="server">
-    <%=this.siteTitle %> - Specific DB Test
+    <%=this.SiteTitle %> - Master DB Test
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="SiteTitleContent" runat="server">
-    Specific DB
+    Master DB
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="BreadCrumbContent" runat="server">
+    <li class="breadcrumb-item"><a href="/default.aspx">Home</a></li>
+    <li class="breadcrumb-item"><a href="/Tests/DB/default.aspx">DB Testing Options</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Master DB Test</li>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="PageBodyContent" runat="server">
-    <p class="lead">A command from the selectable list can be executed against the specified database on the SQL resource, but the connection to the database is made based on the identity selection. Select a command type & identity option and then click execute. The result of the selections will be output in the space below.</p>
+    <p class="lead">This test performs a simple "select getdate()" against the master database on the SQL resource, but the connection to the database is made based on the identity selection. Select an identity option and then click execute. The result of that simple call to the database will be output in the space below.</p>
 
     <div class="row mb-3">
-        <div class="col-4">
-            <h5>Choose An Command</h5>
-        </div>
-        <div class="col-8">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="CommandType" id="GetDate">
-                <label class="form-check-label" for="GetDate">
-                    select getdate()
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="CommandType" id="GetAllUsers_CMD">
-                <label class="form-check-label" for="GetAllUsers_CMD">
-                    select * from customer (DB Project Required)
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="CommandType" id="GetAllUsers_SP">
-                <label class="form-check-label" for="GetAllUsers_SP">
-                    exec spCustomer_GetAll (DB Project Required)
-                </label>
-            </div>
-            <asp:HiddenField ID="CommandSelection" runat="server" Value="" />
-        </div>
-    </div>
-    <div class="row mb-3">
-        <div class="col-4">
+        <div class="col-4 flex">
             <h5>Choose An Identity</h5>
         </div>
         <div class="col-8">
@@ -55,6 +34,7 @@
             <asp:HiddenField ID="IdentitySelection" runat="server" Value="" />
             <asp:Button ID="SubmitSelectionButton" runat="server" Text="Execute" CssClass="btn btn-primary mt-2 mb-2" OnClick="SubmitSelectionButton_Click" />
         </div>
+
     </div>
     <div id="ResultsView" runat="server" visible="false">
         <div class="row mb-3">
@@ -90,15 +70,10 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="ScriptPlaceHolder" runat="server">
     <script language="javascript" type="text/javascript">
         $(document).ready(function () {
-            $("input[type=radio][name='CommandType']").change(function () {
-                var selected = $(this).attr('id');
-                $('#PageBodyContent_CommandSelection').val(selected);
-            });
             $("input[type=radio][name='IdentityType']").change(function () {
                 var selected = $(this).attr('id');
                 $('#PageBodyContent_IdentitySelection').val(selected);
             });
-            CheckIfValuePresent($('#PageBodyContent_CommandSelection'), $("input[type=radio][name='CommandType']"));
             CheckIfValuePresent($('#PageBodyContent_IdentitySelection'), $("input[type=radio][name='IdentityType']"));
         });
 
